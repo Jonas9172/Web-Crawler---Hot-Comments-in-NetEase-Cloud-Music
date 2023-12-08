@@ -2,15 +2,15 @@ import requests
 import json
 
 
-def get_comments(url):
+def get_comments():
 
     headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0',
-        'Referer': 'https://music.163.com/song?id=2051548110',
+        'Referer': 'https://music.163.com/song?id=2028308226',
  }
 
-    params = "2N+/96nVqnwZMKaCcacAUaof9J3JT877ZPUS517BtEkOEV9OVV1bwu6Xr9xA7v3EXj8/G9kay8gnDBUNA5SDUSIVtaFFiuYS0ZxGUAR8ko/c4yFdj5M6IXgADZKBWRauL/7p/lKc6lmwkhv+C2NaufaizkeglyvXe18oH0alPfldURR1Z+RjwAU/xkw7HbblLj+w7pjK90N8YWd97ueKti3oo5n9p5sHTuEZBhJ/BQz889G+3osbOoPTlXBhcIKIr0+3K+jRWOsMV+dyYpUCgIostvDxDnI94ZKiffcb0kM="
-    encSecKey = "31576c7202b88b7c0bc477814b344d46dd27e7eed4630e3d6e83840d69eedca1182c1942ea9c5126b096b9868e07041a7ac7798582a419f63b206c3358e4890da24388b2f4c603424f5b30775639e5cb5b755c7b873ba5cbef0609aa99d912ccdc3e8aeae361000be1814e8bd7a40e1344b3692b97b8807632fc83fadd10635a"
+    params = "57hpWVX0K6E/KMdd9rXkExGZUuLmazvCrZ/Bx/i4/QZzijnB6yyj4LXOvMKXQLuPeCRhEVlbsIASaihmFpCaLpSxXBfetD6lSO99xZOFCgDmUE5V5ERxDYMzGNJNGasTzKOzrwCjpWt3JBcXhDt6fgCgHNHmz/TvTxHJHFqrOXZowb6De//e+5S5vsutaTdzOI9FCiZmf86cKlgeiUWQD5RpiF48U7zpOZydCSesyC0CgkJgsu9+pduh+iGL+AqZhgSodb+HEzSjmTABcWfuQgL6fNN6OT4gJWOAKcaijtg="
+    encSecKey = "b38e40c2d10fe9e2a51bfde5c05f37ee7d2e2bf10d3410ab9820659c830744830ffe2753d52d949bd68f9d34da17fd85cef7df2cb995f3b54e543af11f72076b3a86e44fd42641530dae2b54cfb39124d57d80fa0f7bf59ed8f99df81c0267d1650fcbce9e16e0b2b63f90fd260451339bcf27e0c872afecbef7bcb0288e75ab"
 
     data = {
         "params": params,
@@ -33,6 +33,5 @@ def get_hotcomments(res):
 
 
 if __name__ == '__main__':
-    url = input("Link: ")
-    res = get_comments(url)
+    res = get_comments()
     get_hotcomments(res)
